@@ -67,7 +67,6 @@ class InstagramAuthController
             'scope' => $scope
         ]);
 
-        var_dump($response->json());
         if($response->status() === 200){
             return Redirect::to("https://api.instagram.com/oauth/authorize?client_id={$client_id}&redirect_uri={$redirect_uri}&response_type={$response_type}&scope={$scope}");
         }
